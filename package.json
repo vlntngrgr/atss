@@ -2,16 +2,27 @@
   "name": "atss",
   "version": "0.1.0",
   "private": true,
+  "description": "Site web atsserrurier.be",
   "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts-parcel": "0.0.38"
+    "react-scripts-parcel": "0.0.38",
+    "react-modal": "^3.8.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
   },
   "scripts": {
     "start": "react-scripts-parcel start",
     "build": "react-scripts-parcel build",
     "test": "react-scripts-parcel test --env=jsdom",
-    "eject": "react-scripts-parcel eject"
+    "eject": "react-scripts-parcel eject",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url /pomodoro",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": {
     "development": [
@@ -25,5 +36,7 @@
       "Firefox ESR",
       "not ie < 11"
     ]
-  }
+  },
+  "author": "vlntngrgr",
+  "homepage": "https://github.com/vlntngrgr/atss"
 }
