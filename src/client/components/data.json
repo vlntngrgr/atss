@@ -1,0 +1,105 @@
+{
+    "sections": [{
+        "name": "presentation",
+        "content": {
+            "background": "alt-white",
+            "textColor": "black",
+            "image": {
+                "container": "img-left",
+                "class": "img-article",
+                "src": "assets/images/arnaud.jpg"
+            },
+            "data": [{
+                "tag": "h1",
+                "value": "Bienvenue sur le site d'A.T.S Serrurier"
+            }, {
+                "tag": "p",
+                "value": "Depuis bientôt 10 ans le secteur de la serrurerie me fait de l'oeil, c'est donc tout naturellement qu’après plusieurs années de travail dans le bâtiment, j'ai décidé de m'orienter vers <b>le seul certificat d'étude en serrurerie de Belgique.</b>"
+            }, {
+                "tag": "p",
+                "value": "J'ai donc suivi pendant 2 ans des cours à Namur et effectué quelque <b>500 heures bénévolement</b> dans le secteur du dépannage en général."
+            }, {
+                "tag": "p",
+                "value": "J'ai aussi acquis par moi-même plusieurs techniques que je souhaite maintenant mettre en pratique en tant qu'indépendant."
+            }, {
+                "tag": "p",
+                "value": "Je propose dès lors <b>plusieurs types de services</b> allant de la simple ouverture de porte jusqu'à la sécurisation complète de tous les points d’accès de votre habitation ou lieu de travail."
+            }, {
+                "tag": "p",
+                "value": "Je suis principalement actif dans <b>la région de Sprimont et ses alentours</b> mais également dans la plupart des communes de la province de Liége et dans la région du Brabant Wallon. Je suis disponible en urgence <b>24H/24 et 7J/7</b> ou sur prise de <p>rendez vous.</p>"
+            }]
+        }
+    },{
+        "name": "urgence",
+        "content": {
+            "background": "alt-blue",
+            "textColor": "white",
+            "image": {
+                "container": "img-left",
+                "class": "img-article",
+                "src": "assets/images/troussau.jpg"
+            },
+            "data": [{
+                "tag": "h1",
+                "value": "Urgence"
+            }, {
+                "tag": "p",
+                "value": "J'interviens <b>en urgence</b> pour tout type de demande, avec des techniques non destructives ou destructives si nécessaire. J'ouvre votre porte pour vous permettre d'entrer chez vous et je change si besoin le mécanisme de fermeture (serrure, cylindre/barillet, clé, ...), que vous ayez perdu vos clés ou claqué la porte derrière vous sans pouvoir rentrer, pour une clé cassée dans votre serrure ou encore pour une fermeture provisoire, suite à une effraction."
+            }, {
+                "tag": "p",
+                "value": "Après plusieurs mois de recherches de fournisseurs, je peux également offrir des prix compétitifs par rapport à la plupart des serruriers actifs avec du <b>matériel de qualité et de marque connu et reconnu pour sa fiabilité.</b>"
+            }, {
+                "tag": "h1",
+                "value": "Vous pouvez me contacter au <a href=\"tel:+32497301084\" className=\"tel\">0497301084</a>."
+            }]
+        }
+    },{
+        "name": "securisation",
+        "content": {
+            "background": "alt-white",
+            "textColor": "black",
+            "image": {
+                "container": "img-left",
+                "class": "img-article",
+                "src": "assets/images/serrure.jpg"
+            },
+            "data": [{
+                "tag": "h1",
+                "value": "Sécurisation"
+            }, {
+                "tag": "p",
+                "value": "Le <b>voleur traditionnel</b> n'entrera plus forcément chez vous en forçant votre porte d'entrée principale. Il recherchera <b>les points d’accès faciles</b> et à l'abri des regards."
+            }, {
+                "tag": "p",
+                "value": "La plupart du temps il s'introduira par <b>des portes</b> ou <b>fenêtres situées à l'arrière de votre habitation<b>. C'est pourquoi il est important de sécuriser la plupart des points accessibles de votre lieu d'habitation ou lieu de travail."
+            }, {
+                "tag": "p",
+                "value": "Je vous propose une évaluation gratuite des points d'entrées qui auraient besoin d'être renforcés et <b>des solutions</b> selon un budget que vous fixerez vous-même."
+            }, {
+                "tag": "p",
+                "value": "Je fonctionne avec des formules qui s’adaptent à <b>toute personnes</b> et, si cela vous convient, je créerai avec vous un devis pour vous sécuriser que vous <b>soyez serein</b> la nuit ou quand vous quittez votre habitation."
+            }]
+        }
+    },{
+        "name": "rdv",
+        "content": {
+            "background": "alt-blue",
+            "textColor": "white",
+            "image": {
+                "container": "img-left",
+                "class": "img-article",
+                "src": "assets/images/arnaud.jpg"
+            },
+            "data": [{
+                "tag": "h1",
+                "value": "Prise de rendez-vous"
+            }, {
+                "tag": "p",
+                "value": "Je me déplace <b>rapidement</b> chez vous après la prise de rendez vous, et <b>gratuitement dans un rayon de 30km</b> à partir de Sprimont centre. S'il n'y a pas d'urgence, afin de vous éviter des frais de déplacement, nous pourrions convenir d'une date à laquelle je me trouve dans votre région."
+            }, {
+                "tag": "p",
+                "value": "J'interviens pour le remplacement de votre serrure (de 3 à 7 points de fermetures), de cylindre, de quincaillerie (poignée de porte/fenêtre, garniture de sécurité ou non), de verrou supplémentaire, ou pour une sécurisation complète de vos points d’accès susceptibles d'être les plus sollicités lors de tentatives d'effraction."
+            }]
+        }
+    }]
+}
