@@ -3,26 +3,65 @@
   "version": "0.1.0",
   "private": true,
   "description": "Site web atsserrurier.be",
-  "dependencies": {
-    "gh-pages": "^2.0.1",
-    "node-sass": "^4.11.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts-parcel": "0.0.38",
-    "react-modal": "^3.8.1"
+  "license": "MIT",
+  "author": "vlntngrgr",
+  "homepage": "https://github.com/vlntngrgr/atss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlntngrgr/atss.git"
   },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1"
+  "bugs": {
+    "url": "https://github.com/AnarionBe/met/issues"
   },
   "scripts": {
-    "start": "react-scripts-parcel start",
-    "build": "react-scripts-parcel build",
-    "test": "react-scripts-parcel test --env=jsdom",
-    "eject": "react-scripts-parcel eject",
-    "predeploy": "rm -rf dist && parcel build index.html --public-url /pomodoro",
-    "deploy": "gh-pages -d dist"
+    "lint": "npx eslint --fix --cache --ignore-pattern 'docs/*' src",
+    "build:server": "npx babel src/server -s --out-dir bin/server",
+    "work:server": "npx babel src/server -s --watch --verbose --out-dir bin/server",
+    "build:client": "npx webpack --progress --profile --colors",
+    "work:client": "npx webpack-dev-server --env=dev --hot --progress",
+    "build": "npm run build:server && npm run build:client"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npx eslint --fix --cache",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.6.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.0.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.14.3",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "react": "^16.8.1",
+    "react-cool-tabs": "^1.1.6",
+    "react-dom": "^16.8.1",
+    "react-router-dom": "^4.3.1",
+    "react-validation": "^3.0.7",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
   },
   "browserslist": {
     "development": [
@@ -37,6 +76,9 @@
       "not ie < 11"
     ]
   },
-  "author": "vlntngrgr",
-  "homepage": "https://github.com/vlntngrgr/atss"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  }
 }
