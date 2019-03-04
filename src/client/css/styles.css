@@ -12,37 +12,34 @@ h1 {
 }
 
 body {
-    display: grid;
-    grid-template-rows: 50px repeat(4, 100vh);
-
-    grid-template-columns: 100vw;
+    width: 100vw;
     background-color: lightgray;    
-}
-
-article {
-    min-height: 100vh;
-    height: fit-content;
-    display: grid;
-    align-items: center;
 }
 
 header {
     grid-row: 1;
-    height: auto;
     width: 100%;
-    font-size: 2rem;
 
     position: fixed;
     top: 0;
     left: 0;
 
+    height: 50px;
+
     display: grid;
     grid-template-columns: 65% 30%;
+    grid-template-rows: 7.5vh;
     grid-column-gap: 10px;
+
+    background-color: cornflowerblue;
+
+    z-index: 10;
 }
 
 .appel-container {
     width: 100%;
+    display: flex;
+    font-size: 1.75rem;
 }
 .appel {
     grid-column: 1;
@@ -51,17 +48,42 @@ header {
     width: 100%;
     height: 50px;
     text-decoration: none;
+    
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 }
 .appel:hover {
     text-decoration: none;
 }
 
-.alt-white {
-    background: linear-gradient(to bottom, transparent, white);
-    color: black;
-}   
+main {
+    padding-top: 50px;
+}
 
-.alt-blue {
-    background: linear-gradient(to bottom, transparent, cornflowerblue);
-    color: white;
+article {
+    min-height: 100vh;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+article p {
+    position: relative;
+}
+
+.img-left {
+    float: left;
+}
+
+.img-right {
+    float: right;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
 }

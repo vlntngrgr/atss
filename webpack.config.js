@@ -61,7 +61,7 @@ module.exports = env => {
         entry: ["./app.js"],
         module: {
             rules: [{
-                    test: /\.(png|jpg|gif)$/,
+                    test: /\.(png|svg|jpg|gif)$/,
                     use: [{
                         loader: "file-loader",
                         options: {
@@ -71,7 +71,7 @@ module.exports = env => {
                 },
 
                 {
-                    test: /\.scss$/,
+                    test: /\.css$/,
                     use: [
                         "style-loader", // creates style nodes from JS strings
                         "css-loader", // translates CSS into CommonJS
@@ -105,6 +105,10 @@ module.exports = env => {
                             ],
                         },
                     }, ],
+                },
+                {
+                    test: /\.svg$/,
+                    use: ['@svgr/webpack'],
                 },
             ],
         },

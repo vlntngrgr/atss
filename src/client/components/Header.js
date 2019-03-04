@@ -1,15 +1,17 @@
 import React from "react";
 
-const Header = props => {
-    console.log(props);
+const Header = () => {
     return (
         <header>
-            <div>
+            <div className="appel-container">
                 <a href="tel:+32497301084" className="appel">
                     {"0497301084"}
                 </a>
             </div>
-            <div>{"MENU"}</div>
+            <div>
+                {"MENU"}
+                <div />
+            </div>
         </header>
     );
 };

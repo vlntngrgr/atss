@@ -55,7 +55,7 @@ module.exports = {
             "version":"16.4",
         },
     },
-    "rules": {
+   /*  "rules": {
         "prettier/prettier": [ ERROR, {
             "singleQuote": false,
             "tabWidth": 4,
@@ -188,5 +188,5 @@ module.exports = {
         "valid-typeof": ERROR,
         "vars-on-top": ERROR,
         "yoda": ERROR,
-    }
+    } */
 }
