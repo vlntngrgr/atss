@@ -19,8 +19,10 @@ const section = props => {
     });
 
     return (
-        <article key={props.data.name}>
+        <article id={props.name} key={props.name} className={props.spec}>
+            <div className="sections">
                 {data}
+            </div>
         </article>
     );
 };

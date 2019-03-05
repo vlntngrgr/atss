@@ -1,4 +1,3 @@
-export const Fond = require("./fond.jpg");
 export const Logo = require("./logo.png");
 export const Deno = require("./deno.png");
 export const Cle = require("./cle.jpg");

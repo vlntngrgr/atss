@@ -1,6 +1,7 @@
 {
     "sections": [{
         "name": "presentation",
+        "class": "alt-white",
         "content": {
             "data": [{
                 "name": "presentation01",
@@ -35,6 +36,7 @@
         }
     },{
         "name": "urgence",
+        "class": "alt-blue",
         "content": {
             "data": [{
                 "name": "urgence01",
@@ -56,11 +58,12 @@
             }, {
                 "name": "urgence04",
                 "tag": "h1",
-                "value": "<br/>Vous pouvez me contacter au <a href=\"tel:+32497301084\" className=\"appel\">0497301084</a>"
+                "value": "<br/>Vous pouvez me contacter au <a href=\"tel:+32497301084\" className=\"appel center\">0497301084</a>"
             }]
         }
     },{
-        "name": "securisation",
+        "name": "secu",
+        "class": "alt-white",
         "content": {
             "image": "Secu",
             "data": [{
@@ -92,6 +95,7 @@
         }
     },{
         "name": "rdv",
+        "class": "alt-blue",
         "content": {
             "data": [{
                 "name": "rdv01",

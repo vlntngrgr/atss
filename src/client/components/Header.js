@@ -1,19 +1,35 @@
 import React from "react";
+import Menu from "./Menu";
 
-const Header = () => {
-    return (
-        <header>
-            <div className="appel-container">
+class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            toggleMenu: false,
+        };
+    }
+
+    toggleMenu = event => {
+        this.setState({
+            toggleMenu: !this.state.toggleMenu,
+        });
+    };
+
+    render() {
+        return (
+            <header>
                 <a href="tel:+32497301084" className="appel">
                     {"0497301084"}
                 </a>
-            </div>
-            <div>
-                {"MENU"}
-                <div />
-            </div>
-        </header>
-    );
-};
+                <div>
+                    <Menu
+                        toggle={this.state.toggleMenu}
+                        onClick={this.toggleMenu}
+                    />
+                </div>
+            </header>
+        );
+    }
+}
 
 export default Header;
