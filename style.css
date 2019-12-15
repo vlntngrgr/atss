@@ -1,0 +1,139 @@
+section img {
+	border-radius: 10px;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(to right, #183152, #183152, transparent, #183152, #183152, #183152);
+	z-index: 11;
+}
+
+section {
+	min-height: 100vh;
+}
+
+#background {
+	background-image: url("images/fond.jpg");
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: cover;
+	position: fixed;
+	z-index: -1;
+	opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+#head{
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+	
+	font-size: 60px;
+}
+
+#accueil{
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+	background-image: linear-gradient(to bottom, transparent, white, white, white, transparent);
+}
+
+#urgence{
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+	background-image: linear-gradient(to bottom, transparent, #183152, #183152, #183152, transparent);
+	color: white;
+}
+
+#urgence-contenu {
+	display: inline;
+}
+
+#securisation {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+	background-image: linear-gradient(to bottom, transparent, white, white, white, transparent);
+}
+
+#rdv{
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+	background-image: linear-gradient(to bottom, transparent, #183152, #183152, #183152, transparent);
+	color: white;
+}
+
+#form-contact > input, #form-contact > div, #form-contact > textarea {
+	margin-top: 10px;
+}
+
+#cgv, #disclaimer, #sitemap, #remerciement {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+	background-image: linear-gradient(to bottom, transparent, white, white, white, white, white, transparent);
+	color: black;
+}
+
+footer {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+	background-image: linear-gradient(to bottom, transparent, #183152);
+	padding-bottom: 50px;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  color: white;
+  background-color: #183152;
+}
