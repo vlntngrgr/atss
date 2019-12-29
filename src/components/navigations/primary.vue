@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white fixed-top rsticky-top">
     <form class="form-inline">
       <a href="tel:0497301084" class="btn btn-xs" style="background-color: red; color: white; font-size: 1.2rem"><span class="number">0497301084</span></a>
     </form>
@@ -25,7 +25,7 @@
             <router-link class="dropdown-item" :to="{ name: 'service', params: {name: 'service-1'} }">Service 3</router-link>
           </div>
         </li>
-        <router-link tag="li" :to="{name: 'home'}" active-class="'active'" class="nav-item">
+        <router-link tag="li" :to="{name: 'blog'}" active-class="'active'" class="nav-item">
           <span class="nav-link" href="#">Blog</span>
         </router-link>
       </ul>

@@ -1,5 +1,5 @@
 <template>
-  <main class="container-fluid mt-5" style="width: 100% !important;">
+  <main class="container-fluid" style="width: 100% !important;">
     <div class="row justify-content-around">
       <small-card 
         title="Accueil" 
@@ -22,11 +22,25 @@
 </template>
 
 <script>
+  import { mapState, mapActions } from 'vuex';
   import SmallCard from '@/components/cards/small';
 
   export default {
     components: {
       SmallCard
-    }   
+    },
+    computed: {
+      ...mapState({})
+    },
+    methods: {
+      ...mapActions({
+        initArticles: 'blog/init'
+      })
+    },
+    created() {
+      this.initArticles().then((articles) => {
+        console.log(articles);
+      });
+    }
   }
 </script>
