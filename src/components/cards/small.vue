@@ -1,15 +1,15 @@
 <template>
-  <div class="card text-white bg-secondary my-card">
-    <div class="row no-gutters  my-card__body">
-      <div class="col-md-4 col-s-10 card-img">
+  <div class="card text-white bg-none my-card">
+    <div class="row no-gutters my-card__body">
+      <div class="col-md-4 col-s-10 card-img pt-5">
         <img src="/images/arnaud.jpg" class="card-img-top rounded my-img" alt="...">
       </div>
 
-      <div class="col-md-8 col-s-10" style="width: 100%">
+      <div class="col-md-8 col-s-10 bg-dark card-content" style="width: 100%">
         <div class="card-body">
-          <h5 class="card-title">{{ title }}</h5>
-          <p class="card-content">{{ descr }}</p>
-          <router-link :to="{name: ''}" class="card-link">Go!</router-link>
+          <h4 class="card-title my-card__title">{{ title }}</h4>
+          <p>{{ descr }}</p>
+          <router-link :to="{name: 'home'}" class="card-link">Go!</router-link>
         </div>
       </div>
     </div>
@@ -34,12 +34,40 @@ export default {
 <style>
   .my-card {
     padding: 0 !important;
+
+    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2), transparent);
+    border: none;
+  }
+
+  .my-card__title {
+    border-bottom: 1px solid white;
+
+    text-align: right;
+
+    padding-right: 3rem;
   }
 
   .my-card__body {
     height: 100%;
     width: 100%;
   }
+
+  .wrap-xxs {
+    width: 1.25rem;
+    height: auto;
+  }
+
+  .wrap-xs {
+    width: 2rem;
+    height: auto;
+  }
+
+  .wrap-xms {
+    width: 45px;
+    height: auto;
+  }
+
 
   .wrap-s {
     width: 64px;
@@ -83,11 +111,11 @@ export default {
     content: '';
 
     width: 1rem;
-    height: 2.5rem;
+    height: 2.1rem;
 
     position: absolute;
-    left: -.7rem;
-    top: 0;
+    left: -.65rem;
+    top: 1px;
 
     transform: rotate(30deg);
     border-left: 1px solid white;
@@ -95,6 +123,6 @@ export default {
 
   .card-img {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
 </style>
