@@ -1,0 +1,15 @@
+{
+  "name": "Cambriolage",
+  "title": "Intervention après cambriolage",
+  "content": [
+    {
+      "type": "string",
+      "value": "Sécurisation en urgence de portes, serrures, cylindres jour et nuit ! <br/>Vous avez perdu ou on vous a volé vos clés avec votre adresse ? <br/>Votre porte a été fracturée ou elle présente des signes de tentatives d'effractions ?<br/>Votre cylindre de porte a été abimé, cassé ou enfoncé ? <br/>On a forcé la porte ou la serrure de votre cave, garage ou abri de jardin ? <br/>N'hésitez pas a faire appel à mes services, je me déplace rapidement sur place ! "
+    },
+    {
+      "type": "image",
+      "value": "/images/5.jpg",
+      "align": "right"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Coffre-Fort",
+  "title": "Coffre-Fort",
+  "content": [
+    {
+      "type": "string",
+      "value": "Votre coffre-fort est fermé à clé, ou bloqué, ou vous avez oublié la combinaison et vous avez besoin d'un dépannage pour accéder rapidement à son contenu ? Quel que soit votre besoin, je vous propose un service rapide avec devis avant la moindre intervention sur votre bien. La discrétion est un point important et c'est pourquoi je me déplace toujours en camionnette banalisée et avec des habits de travail traditionnel. "
+    },
+    {
+      "type": "image",
+      "value": "/images/1.jpg",
+      "align": "right"
+    }
+  ]
+}

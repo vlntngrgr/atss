@@ -1,5 +1,5 @@
 <template>
-  <main class="container-fluid" style="width: 100% !important;">
+  <main class="container-fluid py-5" style="width: 100% !important; min-height: 100vh;">
     <div class="row justify-content-around">
       <small-card 
         title="Accueil" 

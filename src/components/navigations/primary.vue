@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white fixed-top rsticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white fixed-top">
     <form class="form-inline">
       <a href="tel:0497301084" class="btn btn-xs" style="background-color: red; color: white; font-size: 1.2rem"><span class="number">0497301084</span></a>
     </form>

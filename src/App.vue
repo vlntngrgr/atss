@@ -2,25 +2,60 @@
   <div id="app">
     <div class="my-background"></div>
     <nav-primary />
-    <div v-if="false" id="nav">
+    <!-- <div v-if="false" id="nav">
       <router-link :to="{name: 'home'}" exact>Accueil</router-link> |
       <router-link to="/services">Services</router-link>
       <router-link to="/blog">Blog</router-link>
-    </div>
-    <router-view class="pt-5 pb-5"/>
+    </div> -->
+    <div class="container-fluid" style="margin-top: 5rem;">
+      <div>
+        <ui-carousel v-if="showSlider"/>
 
-    <block-footer />
+        <button class="btn btn-secondary" @click="showSlider = !showSlider">
+          v
+        </button>
+      </div>
+
+      <div class="">
+        <router-view/>
+      </div>
+    </div>
+
+    <!-- <block-footer v-if="false" /> -->
   </div>
 </template>
 
 <script>
 import NavPrimary from '@/components/navigations/primary';
 import BlockFooter from '@/components/blocks/footer';
+import UiCarousel from '@/components/ui/slider';
 
 export default {
   components: {
     NavPrimary,
     BlockFooter,
+    UiCarousel
+  },
+
+  watch: {
+    showSlider: {
+      handler: (val, oldVal) => {
+        localStorage.setItem('showSlider', val);
+      },
+      immediate: true
+    }
+  },
+
+  data() {
+    return { 
+      showSlider: true
+    };
+  },
+
+  mounted() {
+    if(localStorage.getItem('showSlider')) {
+      this.showSlider = localStorage.getItem('showSlider');
+    }
   }
 }
 </script>

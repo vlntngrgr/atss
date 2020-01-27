@@ -1,7 +1,7 @@
 <template>
   <div class="card text-white bg-none my-card">
     <div class="row no-gutters my-card__body">
-      <div class="col-md-4 col-s-10 card-img pt-5">
+      <div v-if="false" class="col-md-4 col-s-10 card-img pt-5">
         <img src="/images/arnaud.jpg" class="card-img-top rounded my-img" alt="...">
       </div>
 
