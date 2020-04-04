@@ -1,23 +1,30 @@
 <template>
-  <main class="container-fluid py-5" style="width: 100% !important; min-height: 100vh;">
-    <div class="row justify-content-around">
+  <main class="home">
+      
       <small-card 
+        class="home__card"
         title="Accueil" 
-        descr="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus tempor efficitur. Nullam porta, erat id lacinia ultrices, nibh ex pretium eros, ac elementum sapien ex sit amet sapien. Fusce mattis eu metus et fringilla. Aliquam ornare lacus et mi convallis, eget suscipit sem tincidunt. Donec venenatis felis et massa." 
-        class="col-md-5 col-s-8 mt-5"/>
+        descr="Description rapide de cet onglet" 
+      />
+
       <small-card 
+        class="home__card"
         title="Services" 
-        descr="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus tempor efficitur. Nullam porta, erat id lacinia ultrices, nibh ex pretium eros, ac elementum sapien ex sit amet sapien. Fusce mattis eu metus et fringilla." 
-        class="col-md-5 col-s-8 mt-5"/>
+        descr="Description rapide de cet onglet" 
+      />
+      
       <small-card 
+        class="home__card"
         title="Blog" 
-        descr="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus tempor efficitur. Nullam porta, erat id lacinia ultrices, nibh ex pretium eros." 
-        class="col-md-5 mt-5"/>
+        descr="Description rapide de cet onglet"
+      />
+      
       <small-card 
+        class="home__card"
         title="Contact" 
-        descr="Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
-        class="col-md-5 col-s-8 mt-5"/>
-    </div>
+        descr="Description rapide de cet onglet" 
+      />
+
   </main>
 </template>
 

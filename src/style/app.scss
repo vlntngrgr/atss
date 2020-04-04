@@ -1,0 +1,247 @@
+
+//////////////////////////////////
+//
+//  color
+//
+//////////////////////////////////
+
+/* Color Theme Swatches in RGBA */
+$color1: rgba(216, 120, 65, 1);
+$color2: lighten(rgba(242, 213, 196, 1), 50%);
+$color3: rgba(165, 63, 26, 1);
+$color4: rgba(191, 123, 99, 1);
+$color5: rgba(89, 17, 1, 1);
+
+
+.atss {
+  $root: ".atss";
+
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  
+  #{$root}__background {
+    background-image: url("/images/fond.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.2;
+
+    overflow: hidden;
+  }
+}
+
+///////////////////////////////////////////////////
+//
+//  Primary menu
+//
+///////////////////////////////////////////////////
+
+.atss-menu {
+  $root: '.atss-menu';
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $color5;
+  font-size: 1.35rem;
+
+  & .active {
+    background-color: lighten($color5, 20%);
+  }
+
+  #{$root}__toggler {
+    display: none;
+  }
+
+  #{$root}__phone {
+    background-color: lighten($color5, 30%);
+    color: white;
+    padding: .2rem 1rem;
+    border-radius: .3rem;
+    margin: auto 1rem;
+  }
+
+  #{$root}__items {
+    display: flex;
+    margin: auto 0;
+
+    background-color: transparent;
+    justify-content: space-evenly;
+    list-style-type: none;
+    color: $color2;
+
+    padding-left: 0;
+    margin: 0 1rem;
+
+    height: 100%;
+    align-items: center;
+
+    * + * {
+      border-left: 2px solid darken(brown, 50%);
+    }
+  }
+
+  #{$root}__item {
+    padding-left: 2rem;
+    padding-right: 2rem; 
+
+    &:hover, &:focus {
+      background-color: lighten($color5, 20%);
+      cursor: pointer;
+    }
+  }
+
+  #{$root}__banner {
+    display: flex;
+    align-items: center;
+
+    & .title {
+      color: $color2;
+
+      &:hover {
+        color: $color2;
+      }
+    } 
+
+    & .title-small {
+      display: none;
+    }
+
+    & .logo {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+///////////////////////////////////////////////////
+//
+//  Home
+//
+///////////////////////////////////////////////////
+
+.home {
+  $root: '.home';
+
+  width: 95%;
+  min-height: 10rem;
+
+  border-radius: 4px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+///////////////////////////////////////////////////
+//
+//  Services
+//
+///////////////////////////////////////////////////
+
+.services {
+  $root: '.services';
+
+  width: 95%;
+  min-height: 10rem;
+
+  border-radius: 4px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  
+  #{$root}__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #{$root}__card {
+    width: 100%;
+    & * {
+      font-size: 1.3rem;
+      color: white;
+    }
+  }
+}
+
+///////////////////////////////////////////////////
+//
+//  Cards
+//
+///////////////////////////////////////////////////
+
+.atss-card {
+  $root: '.atss-card';
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 1rem;
+
+  border-radius: .4rem;
+
+  background-color: rgba(200, 200, 200, .98);;
+
+  #{$root}__title {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    
+    border-bottom: 3px solid rgba(0, 65, 34, 0.863);
+    border-radius: .4rem;
+
+    background-color: darken($color4, 20%);
+    color: white;
+  }
+
+  #{$root}__body {
+    font-size: 1.4rem;
+    margin: 1rem;
+  }
+}
+
+
+///////////////////////////////////////////////////
+//
+//  Footer
+//
+///////////////////////////////////////////////////
+
+
+.slider {
+  $root: '.slider';
+  
+  max-width: 100%;
+
+  background-color: darken($color2, 20%);
+
+  #{$root}__container {
+    max-width: 60%;
+    max-height: 20rem;
+    margin: auto;
+  }
+
+  #{$root}__item {
+    width: 50%; 
+    height: 20rem;
+  
+    background-size: 100% 100%;
+  }
+} 

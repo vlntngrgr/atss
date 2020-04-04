@@ -42,10 +42,9 @@
     // },
 
     created() {
-      this.initBlog()
-        .catch((error) => {
-          console.error(error);
-        });
+      this.$http.get('/articles').then((response) => {
+        console.log(response.data);
+      })
     }
   } 
 </script>

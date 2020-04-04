@@ -9,24 +9,33 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home/index.vue')
+    component: () => import(/* webpackChunkName: "home" */ '../views/Home/index.vue'),
+    meta: {
+      menu: 'home'
+    }
   },
   {
     path: '/services',
     name: 'services',
     component: () => import(/* webpackChunkName: "services" */ '../views/Services/index.vue'),
-    // children: [
-    //   {
-    //     path: '/service/{id}',
-    //     name: 'service',
-    //     component: 
-    //   }
-    // ]
+    meta: {
+      menu: 'services'
+    },
+    children: [
+      {
+        path: '/services/:name',
+        name: 'service',
+        component: () => import(/* webpackChunkName: "services" */ '../views/Services/index.vue'),
+      }
+    ]
   },
   {
     path: '/blog',
     name: 'blog',
-    component: () => import(/* webpackChunkName: "blog" */ '../views/Blog/index.vue')
+    component: () => import(/* webpackChunkName: "blog" */ '../views/Blog/index.vue'),
+    meta: {
+      menu: 'services'
+    }
   },
   {
     path: '/blog/:id',

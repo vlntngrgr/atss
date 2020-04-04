@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-dark mt-5 my-footer pt-1 fixed-bottom">
-    <div class=" pl-5 pb-1 my-footer__link-container">
-      <h3 class="pl-5">Me contacter</h3>
-      <div class="d-flex">
-        <a href="#" class="ml-5 my-footer__link p-1 box-s d-flex align-items-center justify-content-center">
+  <footer class="atss-footer">
+    <div>
+      <h3>Me contacter</h3>
+      <div>
+        <a href="#">
           <img src="@/assets/images/phone.png" alt="téléphone" class="wrap-xxs mr-md-4" />
           <span class="d-none d-md-block">0497301084</span>
         </a>

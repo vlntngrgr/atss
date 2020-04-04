@@ -1,18 +1,16 @@
 <template>
-  <div class="card text-white bg-none my-card">
-    <div class="row no-gutters my-card__body">
-      <div v-if="false" class="col-md-4 col-s-10 card-img pt-5">
-        <img src="/images/arnaud.jpg" class="card-img-top rounded my-img" alt="...">
-      </div>
+  <div :class="classes">
+      <header v-if="title" class="atss-card__title">
+        <router-link v-if="link" :to="link" >{{title}}</router-link>
 
-      <div class="col-md-8 col-s-10 bg-dark card-content" style="width: 100%">
-        <div class="card-body">
-          <h4 class="card-title my-card__title">{{ title }}</h4>
-          <p>{{ descr }}</p>
-          <router-link :to="{name: 'home'}" class="card-link">Go!</router-link>
-        </div>
-      </div>
-    </div>
+        <span v-else>{{title}}</span>
+      </header>
+
+      <main v-if="descr" class="atss-card__body">
+        {{descr}}
+      </main>
+
+
   </div>
 </template>
 
@@ -21,11 +19,20 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+    },
+    link: {
+      type: Object,
     },
     descr: {
       type: String,
-      required: true,
+    }
+  },
+
+  computed: {
+    classes() {
+      return [
+        'atss-card'
+      ];
     }
   }
 }

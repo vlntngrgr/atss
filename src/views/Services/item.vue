@@ -12,7 +12,7 @@
               v-for="(c, i) in content"
               :key="`service_${i}`"
               :title="c.title"
-              :link="{ name: 'service', params: { name: c.link }}"
+              :link="{ name: 'service', params: { name: c.name }}"
             />
         </div>  
     </div>
