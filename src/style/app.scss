@@ -6,25 +6,34 @@
 //////////////////////////////////
 
 /* Color Theme Swatches in RGBA */
-$color1: rgba(216, 120, 65, 1);
+$color1: white;
 $color2: lighten(rgba(242, 213, 196, 1), 50%);
-$color3: rgba(165, 63, 26, 1);
-$color4: rgba(191, 123, 99, 1);
-$color5: rgba(89, 17, 1, 1);
+$color3: #7B84DB;
+$color4: #7B84DB;
+$color5: #192DA1;
 
+
+.text-img {
+  max-height: 15rem;
+  width: auto;
+  border-radius: 10px;
+}
 
 .atss {
   $root: ".atss";
 
   height: 100%;
+  min-height: 100vh;
   width: 100%;
   overflow: hidden;
 
-  
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  justify-content: space-between;
+
   #{$root}__background {
-    background-image: url("/images/fond.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: $color1;
 
     position: fixed;
     top: 0;
@@ -45,9 +54,26 @@ $color5: rgba(89, 17, 1, 1);
 //
 ///////////////////////////////////////////////////
 
+@media screen and (min-width: 992px) {
+  .atss-nav {
+    margin: 0 !important;
+    background-color:transparent !important;
+    justify-content: flex-end;
+  }
+}
+
+.header {
+  & img {
+    max-height: 30rem;
+    width: 100%;
+
+    border-radius: 4px;
+  }
+}
+
 .atss-menu {
   $root: '.atss-menu';
-
+  color: white !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -56,10 +82,13 @@ $color5: rgba(89, 17, 1, 1);
   z-index: 9999;
 
   display: flex;
-  justify-content: space-between;
 
   background-color: $color5;
   font-size: 1.35rem;
+
+  &:child {
+    color: white !important;
+  }
 
   & .active {
     background-color: lighten($color5, 20%);
@@ -70,11 +99,13 @@ $color5: rgba(89, 17, 1, 1);
   }
 
   #{$root}__phone {
-    background-color: lighten($color5, 30%);
+    background-color: red;
     color: white;
     padding: .2rem 1rem;
     border-radius: .3rem;
     margin: auto 1rem;
+
+    z-index: 9999;
   }
 
   #{$root}__items {
@@ -93,7 +124,7 @@ $color5: rgba(89, 17, 1, 1);
     align-items: center;
 
     * + * {
-      border-left: 2px solid darken(brown, 50%);
+      border-left: 2px solid darken($color5, 50%);
     }
   }
 
@@ -120,7 +151,7 @@ $color5: rgba(89, 17, 1, 1);
     } 
 
     & .title-small {
-      display: none;
+      color: white !important;
     }
 
     & .logo {
@@ -145,8 +176,7 @@ $color5: rgba(89, 17, 1, 1);
   border-radius: 4px;
   margin: auto;
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3rem;
 }
 
 ///////////////////////////////////////////////////
@@ -195,25 +225,32 @@ $color5: rgba(89, 17, 1, 1);
   flex-direction: column;
 
   margin: 1rem;
+  width: 100%;
 
   border-radius: .4rem;
 
-  background-color: rgba(200, 200, 200, .98);;
+  background-color: rgba(238, 238, 238, 0.98);;
 
   #{$root}__title {
     font-size: 1.6rem;
-    padding: 1.5rem;
+    padding: 1rem;
     
     border-bottom: 3px solid rgba(0, 65, 34, 0.863);
     border-radius: .4rem;
 
     background-color: darken($color4, 20%);
     color: white;
+
+    text-align:center;
   }
 
   #{$root}__body {
     font-size: 1.4rem;
     margin: 1rem;
+  }
+
+  &.-xs {
+    background-color: transparent;
   }
 }
 
@@ -224,13 +261,24 @@ $color5: rgba(89, 17, 1, 1);
 //
 ///////////////////////////////////////////////////
 
+.atss-footer {
+  background-color: $color5!important;
+  color: white!important;
+  flex-shrink: 1;
+
+  a {
+    color: white
+  }
+
+  &__content {
+
+  }
+}
 
 .slider {
   $root: '.slider';
   
   max-width: 100%;
-
-  background-color: darken($color2, 20%);
 
   #{$root}__container {
     max-width: 60%;

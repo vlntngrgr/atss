@@ -1,78 +1,43 @@
 <template>
-  <nav class="atss-menu">
-    <a href="tel:0497301084" class="atss-menu__phone">
+  <div class="atss-menu">
+    <a onclick="return gtag_report_conversion('tel: 0497301084');" href="tel:0497301084" class="atss-menu__phone">
       <span class="number">0497301084</span>
     </a>
-    <!-- button --> 
 
     <div class="atss-menu__banner">
         <router-link
-            :to="{ name: 'home' }"
-            class="title"
-        >Arnaud Toussaint Services Serrurie</router-link>
+          :to="{ name: 'home' }"
+          class="title d-lg-block d-none"
+        >Arnaud Toussaint Services Serrurier</router-link>
 
         <router-link
-            :to="{ name: 'home' }"
-            class="title-small"
-        >A T S S</router-link>
+          :to="{ name: 'home' }"
+          class="title-small d-block d-lg-none"
+        >ATSS</router-link>
 
-        <img src="/images/logo.png" alt="Logo ATSS" class="logo" />
+        <img src="/images/logo.png" alt="Logo ATSS" class="logo d-none d-s-block" />
     </div>
 
-    <div 
-        class="atss-menu__toggle" 
-        @mouseover="setmenu(true)" 
-        @mouseout="setmenu(false)" 
-        @click="setmenu(true)">
-
-        <div class="atss-menu__toggler">
-            Menu
-        </div>
-
-        <ul :class="itemClasses">
-            <router-link
-                tag="li"
-                :to="{ name: 'home' }"
-                class="atss-menu__item"
-                active-class="active"
-                :active="isActive('home')"
-                exact
-            >Accueil</router-link>
-
-            <router-link
-                tag="li"
-                :to="{ name: 'services' }"
-                class="atss-menu__item"
-                active-class="active"
-                :active="isActive('services')"
-                exact
-            >Services</router-link>
-
-            <div v-if="false" class="atss-menu__subitems">
-                <router-link
-                v-for="s in services"
-                :key="s.id"
-                tag="li"
-                :to="{ name: 'service', params: { name: 'service-1' } }"
-                class="atss-menu__subitem"
-                active-class="active"
-                :active="isActive('services')"
-                exact
-                >{{ s.label }}</router-link>
-            </div>
-
-            <router-link
-                tag="li"
-                :to="{ name: 'blog' }"
-                class="atss-menu__item"
-                active-class="active"
-                :active="isActive('blog')"
-                exact
-            >Blog</router-link>
+    <nav class="navbar navbar-expand-lg navbar-dark position-fixed fixed-top fixed-right">
+      <a class="navbar-brand" href="/"></a>
+      <button class="navbar-toggler" style="fill: white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse position-fixed fixed-top mt-5 atss-nav" id="navbarNav" style="background-color: #192DA1; text-align:center">
+        <ul class="navbar-nav">
+          <li class="nav-item" style="padding-left: 1rem; padding-right: 1rem">
+            <router-link class="nav-link" :class="isActive('home') ? 'active' : ''" tag="a" :to="{name: 'home'}" href="/" style="color: white;">Acceuil</router-link>
+          </li>
+          <li class="nav-item" style="padding-left: 1rem; padding-right: 1rem">
+            <router-link class="nav-link"  :class="isActive('services') ? 'active' : ''" href="/services" tag="a" :to="{name: 'services'}" style="color: white;">Services</router-link>
+          </li>
+          <li class="nav-item" style="padding-left: 1rem; padding-right: 1rem">
+            <a class="nav-link" target="_blank" href="https://atsserrurier.be/blog"  style="color: white;">Blog</a>
+          </li>
         </ul>
-    </div>
-
-  </nav>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>

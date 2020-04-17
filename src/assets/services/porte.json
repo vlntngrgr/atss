@@ -1,0 +1,17 @@
+{
+    "name": "Porte",
+    "link": "Porte",
+    "title": "Ouverture de porte / Urgences",
+    "content": [
+      {
+        "type": "string",
+        "value": "J'interviens en urgence pour tout type de demande, avec des techniques non destructives ou destructives si nécessaire. J'ouvre votre porte pour vous permettre d'entrer chez vous et je change si besoin le mécanisme de fermeture (serrure, cylindre/barillet, clé, ...), que vous ayez perdu vos clés ou claqué la porte derrière vous sans pouvoir rentrer, pour une clé cassée dans votre serrure ou encore pour une fermeture provisoire, suite à une effraction. Après plusieurs mois de recherches de fournisseurs, je peux également offrir des prix compétitifs par rapport à la plupart des serruriers actifs avec du matériel de qualité et de marque connu et reconnu pour sa fiabilité."
+      },
+      {
+        "type": "image",
+        "value": "/images/slider/1.jpg",
+        "align": "right"
+      }
+    ]
+  }
+  

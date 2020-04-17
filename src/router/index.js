@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Article from '@/views/Blog/article'
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,26 +19,30 @@ const routes = [
     meta: {
       menu: 'services'
     },
-    children: [
-      {
-        path: '/services/:name',
-        name: 'service',
-        component: () => import(/* webpackChunkName: "services" */ '../views/Services/index.vue'),
-      }
-    ]
   },
   {
-    path: '/blog',
-    name: 'blog',
-    component: () => import(/* webpackChunkName: "blog" */ '../views/Blog/index.vue'),
+    path: '/services/:name',
+    name: 'service',
+    component: () => import(/* webpackChunkName: "service" */ '../views/Services/item.vue'),
     meta: {
       menu: 'services'
-    }
+    },
   },
   {
-    path: '/blog/:id',
-    name: 'blog-article',
-    component: Article
+    path: '/cgv',
+    name: 'cgv',
+    component: () => import(/* webpackChunkName: "cgve" */ '../views/legal/cgv.vue'),
+    meta: {
+      menu: 'cgv'
+    },
+  },
+  {
+    path: 'disclaimer',
+    name: 'disclaimer',
+    component: () => import(/* webpackChunkName: "service" */ '../views/legal/disclaimer.vue'),
+    meta: {
+      menu: 'disclaimer'
+    },
   }
 ]
 

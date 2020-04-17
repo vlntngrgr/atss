@@ -3,15 +3,13 @@
     <div class="atss__background"></div>
     
     <nav-primary />
-    <div>
-      <div>
-        <ui-carousel />
-      </div>
+    <ui-carousel />
 
-      <div>
-        <router-view/>
-      </div>
+    <div class="mt-5">
+      <router-view/>
     </div>
+
+    <block-footer />
   </div>
 </template>
 
